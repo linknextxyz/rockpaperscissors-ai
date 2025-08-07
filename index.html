@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper sscissors Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 主题切换按钮 -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" onclick="toggleTheme()">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="game-container">
+            <!-- 游戏主界面 -->
+            <div class="game-panel">
+                <div class="game-header">
+                    <h2 id="round-title">Round 1</h2>
+                </div>
+
+                <!-- 游戏说明 -->
+                <div class="game-instructions">
+                    <h3>Game Rules</h3>
+                    <p>1. Think of a gesture (scissors, rock, or paper) in your mind</p>
+                    <p>2. Click the "Start New Game" button, AI will predict your choice based on historical data and
+                        make a move</p>
+                    <p>3. Click the button based on the result:</p>
+                    <p style="margin-left: 20px;">• <strong>Win</strong> = You won against AI</p>
+                    <p style="margin-left: 20px;">• <strong>Lose</strong> = You lost to AI</p>
+                    <p style="margin-left: 20px;">• <strong>Draw</strong> = You and AI tied</p>
+                    <p>4. AI will analyze your decision patterns and try to defeat you in the next round</p>
+                </div>
+
+                <!-- AI手势显示区域 -->
+                <div class="ai-gesture-area">
+                    <div class="ai-avatar">
+                        <img src="img/AIavtar.png" alt="AI Avatar" class="avatar-img">
+                    </div>
+                    <div class="ai-gesture-display" id="ai-gesture-display">
+                        <!-- AI gesture will be displayed here -->
+                    </div>
+                </div>
+
+                <!-- 游戏控制按钮 -->
+                <div class="game-controls">
+                    <button class="start-btn" onclick="startNewGame()">Start New Game</button>
+
+                </div>
+
+                <!-- 结果按钮 -->
+                <div class="result-controls" id="result-controls">
+                    <button class="result-btn win" id="win-btn" onclick="reportResult('Win')" disabled>Win</button>
+                    <button class="result-btn lose" id="lose-btn" onclick="reportResult('Lose')" disabled>Lose</button>
+                    <button class="result-btn draw" id="draw-btn" onclick="reportResult('Draw')" disabled>Draw</button>
+                </div>
+            </div>
+
+            <!-- 聊天记录区域 -->
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <h2>Game Record</h2>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Game records will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容板块 -->
+        <div class="content-section">
+            <div class="content-container">
+                <div class="content-header">
+                    <h2>What is rockpaperscissors-ai.top?</h2>
+                </div>
+                <div class="content-body">
+                    <p>rockpaperscissors-ai.top is an AI-powered intelligent Rock Paper Scissors battle platform that
+                        upgrades the classic game into an arena of strategy and psychological warfare. Here, you are not
+                        fighting against random algorithms, but an AI opponent that learns, predicts, and evolves.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 怎么玩板块 -->
+        <div class="content-section">
+            <div class="content-container">
+                <div class="content-header">
+                    <h2>How to Play</h2>
+                </div>
+                <div class="content-body">
+                    <ol class="how-to-play-list">
+                        <li>Think of a gesture (scissors, rock, or paper) in your mind</li>
+                        <li>Click the "Start New Game" button, AI will predict your choice based on historical data and
+                            make a move</li>
+                        <li>Click the button based on the result:
+                            <ul>
+                                <li><strong>Win</strong> = You won against AI</li>
+                                <li><strong>Lose</strong> = You lost to AI</li>
+                                <li><strong>Draw</strong> = You and AI tied</li>
+                            </ul>
+                        </li>
+                        <li>AI will analyze your decision patterns and try to defeat you in the next round</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
